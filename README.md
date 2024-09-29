@@ -1,5 +1,5 @@
 # WearToday
- An WearOs app to display the next lesson from Somtoday
+ An WearOS app to display the next lesson from Somtoday
 
 This app isnt a finished thing(And probably wont)
 Its a quick solution i made for my problem.
