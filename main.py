@@ -11,6 +11,8 @@ import os
 
 REFRESH_TOKEN_FILE = 'refresh_token.txt'
 
+VALID_TOKEN = "PUT CUSTOM HERE"
+
 def load_refresh_token():
     if os.path.exists(REFRESH_TOKEN_FILE):
         with open(REFRESH_TOKEN_FILE, 'r') as file:
@@ -60,7 +62,7 @@ def refreshToken():
 
 
 
-code = "eyJ4NXQjUzI1NiI6IkdpZ295b0kyZXcxQS00TDUweGoyWGlPdXIxdE9BMFo3M05mYmZuQXFkU3ciLCJraWQiOiJpcmlkaXVtaWRwLTE2NjgzMzc3ODYzMTA4ODY0NzQwNTkwOTk4NzcyNDAzMjI1MTM0NSIsInR5cCI6ImF0K2p3dCIsImFsZyI6IlJTMjU2In0.eyJhdWQiOiJodHRwczovL3NvbXRvZGF5Lm5sIiwic3ViIjoiZTIxNmVkYzMtMzMxYy00ODgwLTg4MTUtZDFmZTAzZjE2NGNjXFxkNjYzNDVkNS0xODE4LTQ3OGItODA5Yy04OTVhMDQyNDhlNTkiLCJuYmYiOjE3Mjc2MTA1NDksImFtciI6InB3ZCIsInNjb3BlIjoib3BlbmlkIiwiaXNzIjoiaHR0cHM6Ly9zb210b2RheS5ubCIsInR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3Mjc2MTQxNDksImlhdCI6MTcyNzYxMDU0OSwiY2xpZW50X2lkIjoiRDUwRTBDMDYtMzJEMS00QjQxLUExMzctQTlBODUwQzg5MkMyIiwianRpIjoiNmZmNzUwNDQtNzhmZC00NmUwLTg1OGMtNTZkOGNkNTYxMWFjOjE5MTE4NDAxMTczMjMwIn0.XUZkB-0CgQyL59Z4-qbeqmiGnUCoOGVszwOvecETPxY-dB4rTif8PxZMkM-Yxai_IxFONCDkaHmaw0sjZ0PwnBFvzD3xk9uRustHfBC1TgUBcjBLjOPdQ-Z37o-9up0Amo4D7qbk6JlSMrKPZuJalDA7Gqyy6Nv6xXZcc9SakuiRbBmAhZRHc916VEi09RcwF_CWZxZsXUaERglvREpZYSi09aL4gBZ39e3ogH-dz5tyTnGppV9rCQkXzWxVKvFyjWSsoc2GmonZJE1-ifXfyW2sh-t9a5d-RaMdBzsD6utErIsSdCrX5mAaney-pg8eUNA9xEE90Ai7T-bkQ19jQQ"
+code = ""
 code = "Bearer "+code
 headers = {'authorization': code, 'Accept': 'application/json'}
 
@@ -101,8 +103,6 @@ def get_next_lesson(data):
 
 
 next_lesson = "No lessons available"
-
-VALID_TOKEN = "PUT CUSTOM HERE"
 
 def update_next_lesson():
     global next_lesson
